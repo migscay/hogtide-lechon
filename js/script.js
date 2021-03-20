@@ -1,13 +1,23 @@
 var firstOpen=true;
-$('#reservetime').timepicker({ 
-    defaultTime: false,
-}).on("show.timepicker", function(){ 
-    if (firstOpen==true) {
-        $(this).timepicker('setTime','07:00 PM');
-        firstOpen=false;
-    }
-});
+// $('#reservetime').clockpicker({ 
+//     placement: 'bottom',
+//     align: 'left',
+//     autoclose: true,
+//     'default': '07:00 PM'
+// }).on("show.clockpicker", function(){ 
+//     if (firstOpen==true) {
+//         $(this).clockpicker({'default':'07:00 PM'});
+//         alert("first open");
+//         firstOpen=false;
+//     }
+// }); 
 
+$('#reservetime').clockpicker({ 
+    placement: 'bottom',
+    align: 'left',
+    donetext: 'Done',
+    'default': '19:00'
+}); 
 
 var numGuests = 0;
 var section = " ";
